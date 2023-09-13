@@ -5,7 +5,7 @@ region = "eu-west-3"
 
 resource "aws_instance" "one" {
   ami             = "ami-091b37bfd6e01db4f"
-  instance_type   = "t2.micro"
+  instance_type   = "t2.medium"
   key_name        = "jobs"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "eu-west-3a"
@@ -24,7 +24,7 @@ EOF
 
 resource "aws_instance" "two" {
   ami             = "ami-091b37bfd6e01db4f"
-  instance_type   = "t2.micro"
+  instance_type   = "t2.medium"
   key_name        = "jobs"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "eu-west-3b"
@@ -43,7 +43,7 @@ EOF
 
 resource "aws_instance" "three" {
   ami             = "ami-091b37bfd6e01db4f"
-  instance_type   = "t2.micro"
+  instance_type   = "t2.medium"
   key_name        = "jobs"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "eu-west-3a"
@@ -54,7 +54,7 @@ resource "aws_instance" "three" {
 
 resource "aws_instance" "four" {
   ami             = "ami-091b37bfd6e01db4f"
-  instance_type   = "t2.micro"
+  instance_type   = "t2.medium"
   key_name        = "jobs"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "eu-west-3b"
