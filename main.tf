@@ -1,14 +1,14 @@
 #this file consists of code for instances and sg
 provider "aws" {
-region = "ap-southeast-2"
+region = "eu-west-3"
 }
 
 resource "aws_instance" "one" {
-  ami             = "ami-0dfb78957e4edea0c"
+  ami             = "ami-091b37bfd6e01db4f"
   instance_type   = "t2.medium"
-  key_name        = "lokesh-1"
+  key_name        = "jobs"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "ap-southeast-2a"
+  availability_zone = "eu-west-3a"
   user_data       = <<EOF
 #!/bin/bash
 sudo -i
@@ -23,11 +23,11 @@ EOF
 }
 
 resource "aws_instance" "two" {
-  ami             = "ami-0dfb78957e4edea0c"
+  ami             = "ami-091b37bfd6e01db4f"
   instance_type   = "t2.medium"
-  key_name        = "lokesh-1"
+  key_name        = "jobs"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "ap-southeast-2b"
+  availability_zone = "eu-west-3b"
   user_data       = <<EOF
 #!/bin/bash
 sudo -i
@@ -42,22 +42,22 @@ EOF
 }
 
 resource "aws_instance" "three" {
-  ami             = "ami-0dfb78957e4edea0c"
+  ami             = "ami-091b37bfd6e01db4f"
   instance_type   = "t2.medium"
-  key_name        = "lokesh-1"
+  key_name        = "jobs"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "ap-southeast-2a"
+  availability_zone = "eu-west-3a"
   tags = {
     Name = "app-server-1"
   }
 }
 
 resource "aws_instance" "four" {
-  ami             = "ami-0dfb78957e4edea0c"
+  ami             = "ami-091b37bfd6e01db4f"
   instance_type   = "t2.medium"
-  key_name        = "lokesh-1"
+  key_name        = "jobs"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "ap-southeast-2b"
+  availability_zone = "eu-west-3b"
   tags = {
     Name = "app-server-2"
   }
@@ -103,7 +103,7 @@ default = ["user1", "user2", "user3", "user4"]
 }
 
 resource "aws_ebs_volume" "eight" {
- availability_zone = "ap-southeast-2a"
+ availability_zone = "eu-west-3a"
   size = 40
   tags = {
     Name = "ebs-001"
