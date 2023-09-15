@@ -4,7 +4,7 @@ region = "eu-west-3"
 }
 
 resource "aws_instance" "one" {
-  ami             = "ami-091b37bfd6e01db4f"
+  ami             = "ami-0105cda3149939f3b"
   instance_type   = "t2.medium"
   key_name        = "jobs"
   vpc_security_group_ids = [aws_security_group.five.id]
@@ -23,7 +23,7 @@ EOF
 }
 
 resource "aws_instance" "two" {
-  ami             = "ami-091b37bfd6e01db4f"
+  ami             = "ami-0105cda3149939f3b"
   instance_type   = "t2.medium"
   key_name        = "jobs"
   vpc_security_group_ids = [aws_security_group.five.id]
@@ -42,7 +42,7 @@ EOF
 }
 
 resource "aws_instance" "three" {
-  ami             = "ami-091b37bfd6e01db4f"
+  ami             = "ami-0105cda3149939f3b"
   instance_type   = "t2.medium"
   key_name        = "jobs"
   vpc_security_group_ids = [aws_security_group.five.id]
@@ -53,7 +53,7 @@ resource "aws_instance" "three" {
 }
 
 resource "aws_instance" "four" {
-  ami             = "ami-091b37bfd6e01db4f"
+  ami             = "ami-0105cda3149939f3b"
   instance_type   = "t2.medium"
   key_name        = "jobs"
   vpc_security_group_ids = [aws_security_group.five.id]
